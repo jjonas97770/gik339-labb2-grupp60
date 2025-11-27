@@ -4,7 +4,8 @@ console.log("Hello, roni!");
 const inputbox = document.querySelector("#divstyle");
 
 
-const textfield = document.getElementsByClassName("textfield");
+const textfields = document.getElementsByClassName("textfield");
+
 
 
 const button = document.querySelector(".Btn");
@@ -25,9 +26,6 @@ const box = document.querySelector(".box");
     if (fieldName === "content") {
         box.textContent = e.target.value;
     }
-    else {
-        box.textContent = "Roni är kung";
-    }
 }
 
 
@@ -37,6 +35,10 @@ inputbox.addEventListener("change", () => {
     box.style.backgroundColor = colorValue; 
 
 });
+
+for (let i = 0; i < textfields.length; i++) {
+    textfields[i].addEventListener("input", handleInput);
+}
 
 button.addEventListener("click", () => {
     box.remove();

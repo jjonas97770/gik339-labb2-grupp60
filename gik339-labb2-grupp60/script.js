@@ -1,46 +1,49 @@
-console.log("Hello, roni!");
+// ===== Uppgift 4 – fyra variabler =====
 
-const inputbox = document.querySelector("#divstyle"); // bare minimum //
+// 1. Checkboxen – getElementById
+const checkbox = document.getElementById("divStyle");
 
-const textfield = document.getElementsByClassName("textfield"); // bare minimum //
+// 2. Alla textfält – getElementsByClassName
+const textfields = document.getElementsByClassName("textfield");
 
-const button = document.querySelector(".Btn"); // bare minimum //
+// 3. Knappen – querySelector på klass
+const button = document.querySelector(".Btn");
 
-const box = document.querySelector(".box"); // bare minimum //
+// 4. Div-rutan – getElementById
+const box = document.getElementById("box");
 
-function handleInput(e) {  // bare minimum //
- 
+// ===== Uppgift 5 – fördefinierad funktion =====
+function handleInput(e) {
+  // 1. Skriv ut avsändaren (target) till konsolen
+  console.log(e.target);
 
-  // 1. Skriv ut avsändaren (target) till konsolen   // bare minimum //
-  console.log(e.target); 
-
-  // 2. Hämta name-attributet på fältet
-  const fieldName = e.target.name; // bare minimum //
-
+  // 2. Läs name-attributet och skriv ut det
+  const fieldName = e.target.name;
   console.log(fieldName);
 
-  // 3. Om det är fältet "content" → skriv värdet i div:en
+  // 3. Om name/id är "content" → skriv värdet till div-elementet
   if (fieldName === "content") {
-    // bare minimum //
-
-    box.textContent = e.target.value;
-  } else {
-    box.textContent = "Roni är kung"; // bare minimum //
-  }
+    // innerHTML enligt instruktionen i uppgiften
+    box.innerHTML = e.target.value;
+  } 
 }
 
-inputbox.addEventListener("change", () => {     // bare minimum //
+// ===== Uppgift 6 – eventlyssnare =====
 
+// a) Textfälten – kör handleInput när man skriver
+for (let i = 0; i < textfields.length; i++) {
+  textfields[i].addEventListener("input", handleInput);
+}
 
-  const colorField = textfields[0]; // första textfältet = color
-  const colorValue = colorField.value; // det användaren skrev
+// b) Checkboxen – ändra bakgrundsfärg på box utifrån färg-fältet
+checkbox.addEventListener("change", function () {
+  const colorField = textfields[0];      // första textfältet = färg
+  let colorValue = colorField.value;     // det användaren skrev
+
   box.style.backgroundColor = colorValue;
 });
 
-button.addEventListener("click", () => {   // bare minimum //
-
-
+// c) Knappen – ta bort div-elementet
+button.addEventListener("click", function () {
   box.remove();
 });
-
-

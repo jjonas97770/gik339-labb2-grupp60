@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grupp 60</title>
+    <title>Grupp 60 - Labb 2</title>
     <link rel="stylesheet" href="style.css" />
-    <!--ny kod-->
   </head>
   <body>
+    <h1>Labb 2 - Grupp 60</h1>
     <div class="middle-box">
-      <div class="card"></div>
-      <h1>Labb 1 - Grupp 60</h1>
-
       <div class="form-row">
         <label for="color">Färg:</label>
-        <input type="text" id="color" class="textfield" />
+        <!-- name="color" enligt uppgiften -->
+        <input type="text" id="color" name="color" class="textfield" />
       </div>
 
       <div class="form-row">
@@ -22,16 +20,18 @@
         <input type="text" id="content" name="content" class="textfield" />
       </div>
 
-      <div>
-        <label for="divstyle">Stil på box</label>
-        <input type="checkbox" name="divstyle" id="divstyle" class="checkbox" />
+      <div class="form-row">
+        <label for="divStyle">Stil på box</label>
+        <!-- id och name = "divStyle" enligt uppgiften -->
+        <input type="checkbox" id="divStyle" name="divStyle" class="checkbox" />
       </div>
 
       <div class="btn-row">
         <button id="removeBtn" class="Btn">Ta bort</button>
       </div>
 
-      <div id="box" class="box">Div som egentligen ska vara tom</div>
+      <!-- ska vara tom från början -->
+      <div id="box" class="box"></div>
     </div>
 
     <script src="script.js" defer></script>
@@ -40,10 +40,10 @@
 
 <!-- <label for="color">color:</label>
     <input type="text" name="color" id="color" class="textfield"> 
-    
+
     <label for="content">Text i rutan</label>
     <input type="text" name="content" id="content" class="textfield"> 
-    
+
     <label for="divstyle">Ändra stil i rutan</label>
     <input type="checkbox" name="divstyle" id="divstyle" class="checkbox">
  

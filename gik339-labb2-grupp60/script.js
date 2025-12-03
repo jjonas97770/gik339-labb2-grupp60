@@ -1,46 +1,46 @@
 console.log("Hello, roni!");
 
+const inputbox = document.querySelector("#divstyle"); // bare minimum //
 
-const inputbox = document.querySelector("#divstyle");
+const textfield = document.getElementsByClassName("textfield"); // bare minimum //
 
+const button = document.querySelector(".Btn"); // bare minimum //
 
-const textfields = document.getElementsByClassName("textfield");
+const box = document.querySelector(".box"); // bare minimum //
 
+function handleInput(e) {  // bare minimum //
+ 
 
+  // 1. Skriv ut avsändaren (target) till konsolen   // bare minimum //
+  console.log(e.target); 
 
-const button = document.querySelector(".Btn");
+  // 2. Hämta name-attributet på fältet
+  const fieldName = e.target.name; // bare minimum //
 
+  console.log(fieldName);
 
-const box = document.querySelector(".box");
+  // 3. Om det är fältet "content" → skriv värdet i div:en
+  if (fieldName === "content") {
+    // bare minimum //
 
-
-    function handleInput(e) {
-    // 1. Skriv ut avsändaren (target) till konsolen
-    console.log(e.target);
-
-    // 2. Hämta name-attributet på fältet
-    const fieldName = e.target.name;
-    console.log(fieldName);
-
-    // 3. Om det är fältet "content" → skriv värdet i div:en
-    if (fieldName === "content") {
-        box.textContent = e.target.value;
-    }
+    box.textContent = e.target.value;
+  } else {
+    box.textContent = "Roni är kung"; // bare minimum //
+  }
 }
 
+inputbox.addEventListener("change", () => {     // bare minimum //
 
-inputbox.addEventListener("change", () => {
-    const colorField = textfields[0];          // första textfältet = color
-    const colorValue = colorField.value;       // det användaren skrev
-    box.style.backgroundColor = colorValue; 
 
+  const colorField = textfields[0]; // första textfältet = color
+  const colorValue = colorField.value; // det användaren skrev
+  box.style.backgroundColor = colorValue;
 });
 
-for (let i = 0; i < textfields.length; i++) {
-    textfields[i].addEventListener("input", handleInput);
-}
+button.addEventListener("click", () => {   // bare minimum //
 
-button.addEventListener("click", () => {
-    box.remove();
+
+  box.remove();
 });
+
 

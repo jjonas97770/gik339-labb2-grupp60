@@ -1,38 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grupp 60</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <!--ny kod-->
+  </head>
+  <body>
+    <div class="middle-box">
+      <div class="card"></div>
+      <h1>Labb 1 - Grupp 60</h1>
 
-    <h1>Roni is the man</h1>
+      <div class="form-row">
+        <label for="color">Färg:</label>
+        <input type="text" id="color" class="textfield" />
+      </div>
 
+      <div class="form-row">
+        <label for="content">Innehåll:</label>
+        <input type="text" id="content" name="content" class="textfield" />
+      </div>
 
+      <div>
+        <label for="divstyle">Stil på box</label>
+        <input type="checkbox" name="divstyle" id="divstyle" class="checkbox" />
+      </div>
 
-    <label for="color">color:</label>
-    <input type="text" name="color" id="color" class="textfield">
-    
-    
+      <div class="btn-row">
+        <button id="removeBtn" class="Btn">Ta bort</button>
+      </div>
+
+      <div id="box" class="box">Div som egentligen ska vara tom</div>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
+
+<!-- <label for="color">color:</label>
+    <input type="text" name="color" id="color" class="textfield"> 
     
     <label for="content">Text i rutan</label>
-    <input type="text" name="content" id="content" class="textfield">
-    
+    <input type="text" name="content" id="content" class="textfield"> 
     
     <label for="divstyle">Ändra stil i rutan</label>
     <input type="checkbox" name="divstyle" id="divstyle" class="checkbox">
-
-   
  
-    <button class="Btn">Gör något</button>
+    <button class="Btn">Gör något</button> 
 
-    <div class="box"></div>
-    
-    
-
-    <script src="script.js" defer></script>
-
-    
-</body>
-</html>
+    <div class="box"></div> -->

@@ -1,4 +1,4 @@
-// ===== Uppgift 4 – fyra variabler =====
+// Uppgift 4  dom funktioner 
 
 // 1. Checkboxen – getElementById
 const checkbox = document.getElementById("divStyle");
@@ -10,27 +10,30 @@ const textfields = document.getElementsByClassName("textfield");
 const button = document.querySelector(".Btn");
 
 // 4. Div-rutan – getElementById
-const box = document.getElementById("box");
+const box = document.querySelector("#box");
 
-// ===== Uppgift 5 – fördefinierad funktion =====
+
+
+
+
+//  Uppgift 5  fördefinierad funktion 
 function handleInput(e) {
-  // 1. Skriv ut avsändaren (target) till konsolen
+  // Skriv ut avsändaren (target) till konsolen
   console.log(e.target);
 
-  // 2. Läs name-attributet och skriv ut det
+  //  Läs name-attributet och skriv ut det
   const fieldName = e.target.name;
   console.log(fieldName);
 
-  // 3. Om name/id är "content" → skriv värdet till div-elementet
+  // Om name/id är "content"  skriv värdet till div-elementet
   if (fieldName === "content") {
-    // innerHTML enligt instruktionen i uppgiften
     box.innerHTML = e.target.value;
   } 
 }
 
-// ===== Uppgift 6 – eventlyssnare =====
+// Uppgift 6  eventlyssnare 
 
-// a) Textfälten – kör handleInput när man skriver
+// a) Textfälten  kör handleInput när man skriver
 for (let i = 0; i < textfields.length; i++) {
   textfields[i].addEventListener("input", handleInput);
 }
@@ -43,7 +46,7 @@ checkbox.addEventListener("change", function () {
   box.style.backgroundColor = colorValue;
 });
 
-// c) Knappen – ta bort div-elementet
+// c) Knappen  ta bort div-elementet
 button.addEventListener("click", function () {
   box.remove();
 });
